@@ -1,0 +1,15 @@
+<div class="container">
+     {{# if usuario}}
+        <h2 class="text-center mt-4">Bienvenid@ a MercadoWeb {{usuario}}, seleccione sus productos</h2>        
+        <div class="row mb-4">
+            {{#each carritoCompleto}}
+            {{>productos nombre= this.nombre imagen= this.imagen precio=this.precio}}
+            {{/each}}
+        </div>
+    {{else}}
+        <div class="alert alert-info mt-4 text-center" role="alert">
+            Inicia sesión para poder comprar
+        </div>
+    {{/ if}}
+    
+</div>
